@@ -1,23 +1,13 @@
 {
-  "name": "madness",
-  "version": "1.0.0",
-  "description": "madforjekyll",
-  "main": "Gruntfile.js",
-  "dependencies": {
-    "magnific-popup": "^1.0.0"
+  "name": "hugo-universal-theme",
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sunbliss/sunbliss.github.io.git"
-  },
-  "author": "madness",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sunbliss/sunbliss.github.io/issues"
-  },
-  "homepage": "https://github.com/sunbliss/sunbliss.github.io#readme"
+    "lint": "eslint .",
+    "install_hugo": "brew update && brew install hugo"
+  }
 }
