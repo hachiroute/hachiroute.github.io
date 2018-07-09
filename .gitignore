@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Idea files
 .idea/*
 
@@ -21,3 +22,9 @@ Gemfile.lock
 .gems
 jekyll-theme-type-on-strap.gemspec
 node_modules/*
+=======
+.DS_Store
+public/
+npm-debug.log
+/node_modules/*
+>>>>>>> ffccfecfe17a81060fb39ae7a2d432891dc77258

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 language: ruby
 rvm:
 - 2.3.3
@@ -17,3 +18,26 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 sudo: false # route your build to the container-based infrastructure for a faster build
+=======
+sudo: required
+os:
+  - osx
+language: ruby
+rvm:
+  - 2.3.0
+env:
+  - TRAVIS_NODE_VERSION="6"
+install:
+  - brew update
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - npm install
+  - npm run install_hugo
+script:
+  - npm run lint
+  - cd exampleSite
+  - hugo
+notifications:
+  slack:
+    rooms:
+      - devcows:Qs59B9IYFi3IfrejVqNlN5G7#general
+>>>>>>> ffccfecfe17a81060fb39ae7a2d432891dc77258
